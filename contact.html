@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Me</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffe6f0;
+    color: #4a2c3a;
+    padding-bottom: 70px;
+}
+
+/* Navbar */
+nav {
+    background-color: #ffb6c1;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a2c3a;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a8325a;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #4a2c3a;
+    font-weight: bold;
+    background-color: #ffd1dc;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #ff8fab;
+    color: white;
+}
+
+/* Message Form */
+form {
+    background-color: #ffd1dc;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+    font-size: 16px;
+    width: 100%;
+}
+
+form button {
+    background-color: #ffb6c1;
+    color: #4a2c3a;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff8fab;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffb6c1;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Contact Me ✨</h1>
+    <p>Feel free to reach out to me via email or social media!</p>
+</header>
+
+<section class="contact-section">
+
+    <div class="social-links">
+        <a href="mailto:meriejoyg@gmail.com" target="_blank">Gmail</a>
+        <a href="https://www.facebook.com/mmeriejg/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/mmeriejg/" target="_blank">Instagram</a>
+    </div>
+
+    <form action="mailto:meriejoyg@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message 💌</button>
+    </form>
+
+</section>
+
+<footer>
+    <p>My Portfolio</p>
+</footer>
+
+</body>
+</html>

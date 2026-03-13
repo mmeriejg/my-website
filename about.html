@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffe6f0;
+    color: #4a2c3a;
+    padding-bottom: 70px;
+}
+
+nav {
+    background-color: #ffb6c1;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a2c3a;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a8325a;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 40px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffb6c1;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 40px 40px;
+}
+
+.box {
+    background-color: #ffd1dc;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.box h2 {
+    margin-bottom: 15px;
+    color: #a8325a;
+}
+
+/* SAME SIZE PHOTOS */
+.photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #ffb6c1;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.85);
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 70%;
+    border-radius: 15px;
+}
+
+#modalDesc {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4a2c3a;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 40px;
+    color: #4a2c3a;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffb6c1;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="about-header">
+    <img src="mypic.jpg" alt="My Photo" class="profile-pic">
+    <div>
+        <h1>Merie Joy T. Gomez 🌸</h1>
+        <p>I am Merie Joy Gomez, but others calls me 'Eli', 20 years old, I live in P-5, Poblacion, Lianga, Surigao del Sur. Currently enrolled in North Eastern Mindanao State University.</p>
+    </div>
+</section>
+
+<section class="content">
+
+    <div class="box">
+        <h2>My Family & Pet 🐾</h2>
+        <p>These are the people and pets I love most.</p>
+
+        <img src="fam.jpg" class="photo"
+        data-description="This is my family. ❤️">
+
+        <img src="sibs.jpg" class="photo"
+        data-description="These are my siblings. We share many happy memories together. 😊">
+
+        <img src="pet.jpg" class="photo"
+        data-description="My adorable pet who brings joy to our home. 🐾">
+
+        <img src="pet2.jpg" class="photo"
+        data-description="This is my pet rabbit.">
+
+    </div>
+
+    <div class="box">
+        <h2>My Dreams & Goals ✨</h2>
+        <p>Things I want to achieve in life.</p>
+
+        <img src="dream1.jpg" class="photo"
+        data-description="One of my biggest dreams is to travel European countries. ">
+
+        <img src="dream2.jpg" class="photo"
+        data-description="One of my biggest dreams is to graduate. ">
+
+        <img src="dream3.jpg" class="photo"
+        data-description="One of my biggest dreams is to be financially stable in the future. ">
+
+        <img src="dream4.jpg" class="photo"
+        data-description="One of my biggest dreams is to have my owm house. ">
+    </div>
+
+    <!-- UPDATED HOBBIES BOX WITH 4 PICTURES -->
+    <div class="box">
+        <h2>Things I Want To Do / Hobbies 💕</h2>
+        <p>Here are some things I enjoy and want to explore more:</p>
+
+        <img src="travel.jpg" class="photo"
+        data-description="I want to travel to different countries and explore new cultures. 🌍">
+
+        <img src="book.jpg" class="photo"
+        data-description="I enjoy reading books that help me grow. 📚">
+
+        <img src="music.jpg" class="photo"
+        data-description="Listening to music helps me relax and feel happy. 🎵">
+
+        <img src="photo.jpg" class="photo"
+        data-description="I love taking aesthetic photos and capturing beautiful moments. 📸">
+    </div>
+
+</section>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <p id="modalDesc"></p>
+</div>
+
+<footer>
+    <p>My Portfolio</p>
+</footer>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const modalDesc = document.getElementById("modalDesc");
+const photos = document.querySelectorAll(".photo");
+const closeBtn = document.querySelector(".close");
+
+photos.forEach(photo => {
+    photo.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalDesc.textContent = this.getAttribute("data-description");
+    });
+});
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+modal.onclick = function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Projects</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffe6f0;
+    color: #4a2c3a;
+    padding-bottom: 70px;
+}
+
+/* Navbar */
+nav {
+    background-color: #ffb6c1;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a2c3a;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a8325a;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.project-card {
+    background-color: #ffd1dc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 3px solid #ffb6c1;
+}
+
+.project-card h2 {
+    margin-bottom: 10px;
+    color: #a8325a;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffb6c1;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #4a2c3a;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8fab;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffb6c1;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Projects ✨</h1>
+    <p>Here are some things I’ve worked on</p>
+</header>
+
+<section class="projects">
+
+    <div class="project-card">
+        <img src="project1.jpg" alt="Project One">
+        <h2>PAKUSGANAY2k25</h2>
+        <p>This was my entry during the Intramurals photojournalism contest, it won 1st palce.</p>
+        <a href="https://www.canva.com/design/DAGg6h66BrU/VeQ1Xb8o3dAzyRriQuZaWw/edit?utm_content=DAGg6h66BrU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn" target="_blank" rel="noopener noreferrer">View Project 💕</a>
+    </div>
+
+    <div class="project-card">
+        <img src="project2.jpg" alt="Project Two">
+        <h2>Video Tutorial</h2>
+        <p>This was my project in multimedia subject.</p>
+        <a href="https://drive.google.com/file/d/19L5gJdaxclkQ5UNwC5pk5G0qQxXjyWAW/view?usp=sharing" class="btn" target="_blank" rel="noopener noreferrer">View Project 💕</a>
+    </div>
+
+    <div class="project-card">
+        <img src="project3.jpg" alt="Project Three">
+        <h2>Bayanihan Rides</h2>
+        <p>This was my entreprenuerial requirement.</p>
+        <a href="https://drive.google.com/file/d/1Nlz1muHCOa5NNrxHgB-9mYu-TIL4F-c_/view?usp=sharing" class="btn" target="_blank" rel="noopener noreferrer">View Project 💕</a>
+    </div>
+
+    <div class="project-card">
+        <img src="project4.jpg" alt="Project Four">
+        <h2>Student Information System</h2>
+        <p>A final requirement for Object-Oriented Programming.</p>
+        <a href="https://drive.google.com/file/d/1ulpRqdKr4BYJb8jUlZ9R50ctFPof1BNp/view?usp=sharing" class="btn" target="_blank" rel="noopener noreferrer">View Project 💕</a>
+    </div>
+
+    <div class="project-card">
+        <img src="project5.jpg" alt="Project Five">
+        <h2>Robot</h2>
+        <p>The robot requirement in embedded system that took all my braincells.</p>
+        <a href="https://docs.google.com/document/d/1OpXfbzuwVSRVC5PVKowqRpJSB2G_ym5quU_S-WxDwHo/edit?usp=sharing" class="btn" target="_blank" rel="noopener noreferrer">View Project 💕</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>My Portfolio</p>
+</footer>
+
+</body>
+</html>
